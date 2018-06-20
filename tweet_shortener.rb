@@ -37,6 +37,8 @@ def selective_tweet_shortener(tweet)
     end
 end
 
+# Below the truncated_tweet is meant to be a string that can accept another string. This method checks if the length of a tweet after substitution is over 140 characters. If it is, we only push characters 0-136 into truncated_tweet and then append "..." to the end. If not, we push out the original tweet. 
+
 def shortened_tweet_truncator(tweet)
   truncated_tweet = ""
   if word_substituter(tweet).length > 140
